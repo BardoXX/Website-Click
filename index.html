@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,24 +40,34 @@
                     </a>
                 </div>
                 <div class="flex lg:hidden">
-                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200">
+                    <button id="menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
-                <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">Websites</a>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">Domains</a>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">Features</a>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">About</a>
+                <div id="menu" class="hidden lg:flex lg:gap-x-12">
+                    <a href="#" class="text-sm font-semibold text-gray-900 dark:text-gray-200">Websites</a>
+                    <a href="#" class="text-sm font-semibold text-gray-900 dark:text-gray-200">Domains</a>
+                    <a href="#" class="text-sm font-semibold text-gray-900 dark:text-gray-200">Features</a>
+                    <a href="#" class="text-sm font-semibold text-gray-900 dark:text-gray-200">About</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm/6 font-semibold text-gray- 900 dark:text-gray-200">Contact</a>
+                    <a href="#" class="text-sm font-semibold text-gray-900 dark:text-gray-200">Contact</a>
                 </div>
             </nav>
         </header>
+    </div>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+        
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
         <div class="relative isolate px-6 pt-14 lg:px-8">
             <!-- Animated Background -->
